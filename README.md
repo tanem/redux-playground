@@ -4,6 +4,11 @@ _WIP_
 
 ## examples
 
+```
+$ npm start
+$ open examples/[example]
+```
+
 ## license
 
 MIT
