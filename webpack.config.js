@@ -21,12 +21,8 @@ module.exports = {
   devtool: 'cheap-module-eval-source-map',
 
   entry: {
-    simple: [
-      './examples/simple/index.js'
-    ],
-    thunk: [
-      './examples/thunk/index.js'
-    ]
+    simple: './examples/simple/index.js',
+    thunk: './examples/thunk/index.js'
   },
 
   module: {
