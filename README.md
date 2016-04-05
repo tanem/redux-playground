@@ -6,6 +6,7 @@ _WIP_
 
 - [simple](examples/simple)
 - [thunk](examples/thunk)
+- [thunk-promise](examples/thunk-promise)
 
 ## start
 

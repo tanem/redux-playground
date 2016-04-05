@@ -22,7 +22,8 @@ module.exports = {
 
   entry: {
     simple: './examples/simple/index.js',
-    thunk: './examples/thunk/index.js'
+    thunk: './examples/thunk/index.js',
+    'thunk-promise': './examples/thunk-promise/index.js'
   },
 
   module: {
