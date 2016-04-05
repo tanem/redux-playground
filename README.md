@@ -4,9 +4,14 @@ _WIP_
 
 ## examples
 
+- [simple](examples/simple)
+- [thunk](examples/thunk)
+
+## start
+
 ```
 $ npm start
-$ open examples/[example]
+$ open http://localhost:3000/examples/[example]
 ```
 
 ## license
