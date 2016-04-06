@@ -1,0 +1,4 @@
+- promise
+- optimise
+- saga
+- side-effects
