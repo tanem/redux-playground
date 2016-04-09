@@ -1,4 +1,4 @@
-- promise
-- optimise
+- optimist
 - saga
 - side-effects
+- loop
