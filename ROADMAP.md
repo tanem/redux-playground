@@ -1,4 +1,3 @@
-- optimist
 - saga
 - side-effects
 - loop
