@@ -1,12 +1,15 @@
 import { combineReducers, createStore, applyMiddleware } from 'redux';
 import optimist, {BEGIN, COMMIT, REVERT} from 'redux-optimist';
+import uuid from 'node-uuid';
 
 const valueEl = document.getElementById('value');
 const incrementSuccessfulEl = document.getElementById('increment-successful');
 const incrementFailedEl = document.getElementById('increment-failed');
 
 const store = createStore(
-  optimist(combineReducers({ counter: counterReducer })),
+  optimist(combineReducers({
+    counter: counterReducer
+  })),
   applyMiddleware(
     incrementSuccessfulMiddleware(),
     incrementFailedMiddleware()
@@ -51,7 +54,7 @@ function incrementSuccessfulMiddleware() {
     if (action.type !== 'INCREMENT_SUCCESSFUL') {
       return next(action);
     }
-    let transactionID = getTransactionID
+    let transactionID = uuid.v4();
     next({
       type: 'INCREMENT',
       optimist: { type: BEGIN, id: transactionID }
@@ -59,7 +62,7 @@ function incrementSuccessfulMiddleware() {
     setTimeout(() => {
       next({
         type: 'INCREMENT_COMPLETE',
-        optimist: {type: COMMIT, id: transactionID}
+        optimist: { type: COMMIT, id: transactionID }
       });
     }, 1000);
   };
@@ -70,7 +73,7 @@ function incrementFailedMiddleware() {
     if (action.type !== 'INCREMENT_FAILED') {
       return next(action);
     }
-    let transactionID = getTransactionID();
+    let transactionID = uuid.v4();
     next({
       type: 'INCREMENT',
       optimist: { type: BEGIN, id: transactionID }
@@ -78,13 +81,8 @@ function incrementFailedMiddleware() {
     setTimeout(() => {
       next({
         type: 'INCREMENT_FAILED',
-        optimist: {type: REVERT, id: transactionID}
+        optimist: { type: REVERT, id: transactionID }
       });
     }, 1000);
   };
-}
-
-let nextTransactionID = 0;
-function getTransactionID() {
-  return nextTransactionID++;
 }
