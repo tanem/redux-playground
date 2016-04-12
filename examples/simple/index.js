@@ -1,27 +1,16 @@
-import { createStore } from 'redux';
+import store from './store';
+import { increment, decrement } from './actions';
 
-const counterReducer = (state = 0, action) => {
-  switch (action.type) {
-    case 'INCREMENT':
-      return state + 1
-    case 'DECREMENT':
-      return state - 1
-    default:
-      return state
-  }
-};
-
-const store = createStore(counterReducer);
 const valueEl = document.getElementById('value');
+const incrementEl = document.getElementById('increment');
+const decrementEl = document.getElementById('decrement');
 
-const render = () => valueEl.innerHTML = store.getState().toString();
 render();
 store.subscribe(render);
 
-document
-  .getElementById('increment')
-  .addEventListener('click', () => store.dispatch({ type: 'INCREMENT' }));
+incrementEl.addEventListener('click', () => store.dispatch(increment()));
+decrementEl.addEventListener('click', () => store.dispatch(decrement()));
 
-document
-  .getElementById('decrement')
-  .addEventListener('click', () => store.dispatch({ type: 'DECREMENT' }));
+function render() {
+  valueEl.innerHTML = store.getState().toString();
+}
