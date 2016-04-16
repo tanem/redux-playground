@@ -26,6 +26,7 @@
     "node-uuid": "^1.4.7",
     "redux": "^3.3.1",
     "redux-optimist": "0.0.2",
+    "redux-saga": "^0.9.5",
     "redux-thunk": "^2.0.1"
   },
   "devDependencies": {

@@ -6,6 +6,5 @@
 
 # examples
 
-- saga
 - side-effects
 - loop

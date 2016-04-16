@@ -8,6 +8,7 @@ _WIP_
 - [thunk](examples/thunk)
 - [thunk-promise](examples/thunk-promise)
 - [optimist](examples/optimist)
+- [saga](examples/saga)
 
 ## start
 
