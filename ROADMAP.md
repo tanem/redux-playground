@@ -5,5 +5,6 @@
 
 # examples
 
+- reselect
 - side-effects
 - loop
