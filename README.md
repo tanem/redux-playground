@@ -2,6 +2,8 @@
 
 _WIP_
 
+[Redux](https://github.com/reactjs/redux) ecosystem examples.
+
 ## examples
 
 - [simple](examples/simple)
