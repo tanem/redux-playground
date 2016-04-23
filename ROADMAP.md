@@ -8,3 +8,4 @@
 - reselect
 - side-effects
 - loop
+- add tests to saga
