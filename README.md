@@ -1,6 +1,6 @@
 # redux-playground
 
-_WIP_
+:warning: _WIP_ :warning:
 
 [Redux](https://github.com/reactjs/redux) ecosystem examples.
 
