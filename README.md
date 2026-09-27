@@ -1,5 +1,7 @@
 # redux-playground
 
+> **Unmaintained.** This project is no longer maintained and the repository is archived.
+
 :warning: _WIP_ :warning:
 
 [Redux](https://github.com/reactjs/redux) ecosystem examples.
@@ -22,4 +24,3 @@ $ open http://localhost:3000/examples/[example]
 ## license
 
 MIT
-
